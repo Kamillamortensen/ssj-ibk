@@ -7,6 +7,8 @@ import MembershipsAndPrices from "./pages/MembershipsAndPrices";
 import TeamsAndHours from "./pages/TeamsAndHours";
 import NoPage from "./pages/NoPage";
 import './index.css';
+import { ThemeProvider } from "@mui/material";
+import { appTheme } from "./themes/theme";
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 </style>
@@ -15,6 +17,7 @@ import './index.css';
 export default function App() {
   return (
     <BrowserRouter>
+            <ThemeProvider theme={appTheme}>
       <Routes>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
@@ -23,6 +26,7 @@ export default function App() {
           <Route path="teams" element={<TeamsAndHours />} />
           <Route path="*" element={<NoPage />} />
       </Routes>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }

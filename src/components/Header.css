@@ -1,21 +1,28 @@
+@import "../index.css";
+
+.toolbar{
+    justify-content: space-between;
+}
 ul {
     top: 0px;
     display: flex;
     flex-direction: 'row';
     flex-wrap: 'wrap';
     gap: 20px;
-    background-color: lightblue;
     list-style-type: none;
-    width: 100vw;
     height: 50px;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
 
 }
+
+img{
+    height: 80px;
+    padding: 5px;
+}
+
 a {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-
 }
 
 a:visited {
